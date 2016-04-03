@@ -1,0 +1,84 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.name}}">
+  <ion-content class="padding">
+    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"><br/>
+     <b> Gender </b> : {{chat.gender}} <br/>
+	  <b> Date of Birth </b>: {{chat.dob}} <br/>
+	  <b> Date of Administration</b>: {{chat.wisc5_doa}} <br/>
+	<label for="singleSelect"> <b>Index </b></label> 
+    <select name="singleSelect" ng-init="scaledindex='0'" ng-model="scaledindex" ng-change="displayScaledScoreByIndex(scaledindex)">
+	  <option value="0">Please Select</option>
+      <option value="1">Verbal Comprehension Index</option>
+      <option value="2">Visual Spatial Index</option>
+	  <option value="3">Fluid Reasoning Index </option>
+	  <option value="4">Working Memory Index</option>
+	  <option value="5">Processing Speed Index</option>
+	  <option value="6">Full Scale IQ</option>
+    </select><br>
+	
+	<highchart id="chart1" config="chartConfig" class="span9" ></highchart>
+	<div class="table-responsive">
+		<table class="table table-condensed">
+   <thead>
+     <tr>
+       <th></th>
+       <th><b>Standard Scores</b></th>
+       <th><b>% of Cases</b></th>
+       <th><b>Qualitative Descriptions</b></th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><div class="box" style="background-color: #99CCFF;"></div></td>
+        <td> <70 </td>
+       <td>2.2%</td>
+       <td>Extremely Low</td>
+     </tr>
+     <tr>
+       <td><div class="box" style="background-color: #0066FF;"></div></td>
+       <td> 70 - 80 </td>
+       <td>6.7%</td>
+       <td>Very Low</td>
+     </tr>
+     <tr>
+       <td><div class="box" style="background-color: #3366CC;"></div></td>
+        <td> 80 - 90 </td>
+       <td>16.1%</td>
+       <td>Low Average</td>
+     </tr>
+      <tr>
+       <td><div class="box" style="background-color: #99CCFF;"></div></td>
+        <td> 90 - 110 </td>
+       <td>50%</td>
+       <td>Average</td>
+     </tr>
+     <tr>
+       <td><div class="box" style="background-color: #3366CC;"></div></td>
+        <td> 110 - 120 </td>
+       <td>16.1%</td>
+       <td>High Average</td>
+     </tr>
+     <tr>
+       <td><div class="box" style="background-color: #0066FF;"></div></td>
+        <td> 120 - 130  </td>
+       <td>6.7%</td>
+       <td>Very High</td>
+     </tr>
+     <tr>
+       <td><div class="box" style="background-color: #99CCFF;"></div></td>
+        <td> >130 </td>
+       <td>2.2%</td>
+       <td>Extremely High</td>
+     </tr>
+   </tbody>
+ </table>
+
+	</div>
+	
+  </ion-content>
+</ion-view>

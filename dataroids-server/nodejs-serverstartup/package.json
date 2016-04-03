@@ -1,0 +1,14 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "dependencies": {
+    "csvtojson": "^0.5.3",
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "http-status": "^0.2.1",
+    "mongodb": "^2.1.14",
+    "mongoose": "^4.4.10",
+    "underscore": "^1.8.3",
+    "wagner-core": "^0.2.0"
+  }
+}
