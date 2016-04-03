@@ -4,7 +4,7 @@ var status = require("http-status");
 var fs = require("fs");
 
 var app = express();
-var uri = 'mongodb://10.106.211.47:27017/product_data';
+var uri = 'mongodb://localhost:27017/product_data';
 
 console.log("......... starting server ....");
 

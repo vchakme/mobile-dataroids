@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
 .controller('DashDetailCtrl', function($scope, $stateParams, $http, Chats) {
 
 $scope.chat = Chats.get($stateParams.chatId);
-$http.get("http://10.106.211.47:3000/api/examinee/teid/" + parseInt($stateParams.chatId)).
+$http.get("http://localhost:3000/api/examinee/teid/" + parseInt($stateParams.chatId)).
   success(function(data) {
     $scope.prodData = data;
 
@@ -906,7 +906,7 @@ console.log(defaultZone);
   $scope.chat = Chats.get($stateParams.chatId);
   
   //make api call to fetch data.
-  $http.get("http://10.106.211.47:3000/api/examinee/teid/" + parseInt($stateParams.chatId)).
+  $http.get("http://localhost:3000/api/examinee/teid/" + parseInt($stateParams.chatId)).
   success(function(data) {
     $scope.prodData = data;
 
