@@ -1,2 +1,2 @@
 # mobile-dataroids
-This is an mobile-first project.
+A mobile-first report generating tool.
