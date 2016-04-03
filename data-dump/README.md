@@ -1,15 +1,11 @@
-# db-dump
-Import command : 
 # Import from json file
 mongoimport -d database_name -c collection_name outfile.json
+
 # Import from csv file
 # --headerline: Using the first row of data as the column name of the Collection.
 mongoimport -d database_name -c collection_name --type csv --file locations.csv --headerline
 
-Export Command : 
-
 # Export to csv file
-# This is the simplest syntax:
 # In the case csv file, you must provide the list of columns Collection (Required).
 # List of columns separated by commas and no spaces.
 # Must declare what type of output file (--csv)
