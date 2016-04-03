@@ -13,5 +13,7 @@ mongoimport -d database_name -c collection_name --type csv --file locations.csv 
 mongoexport -d database_name -c collection_name -f column_1,column_2,column_3 --csv -o outfile.csv
 
 # Export to json file
+# option 1
 mongoexport -d databaseName -c collectionName -o outputLocation.json
+# option 2
 mongoexport --db=databaseName --collection=collectionName --out=outputLocation.json
